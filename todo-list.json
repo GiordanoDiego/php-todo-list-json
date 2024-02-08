@@ -1,0 +1,18 @@
+[
+    {
+        "task" : "Fare il caffè",
+        "done" : true
+    },
+    {
+        "task" : "Guardare Sanremo",
+        "done" : true
+    },
+    {
+        "task" : "Comprare Olio",
+        "done" : true
+    },
+    {
+        "task" : "Scaricare ricetta patate lesse",
+        "done" : true
+    }
+]
