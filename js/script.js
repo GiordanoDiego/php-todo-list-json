@@ -16,8 +16,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            h1Content: 'Todo-List Json',
-            allTask:[]
+            h1Content: 'To do List Json',
+            alltodo:[]
 
         };
     },
@@ -29,10 +29,11 @@ createApp({
     },
     mounted() {
         axios
-            .get('http://localhost:8888/Boolean/4-php-todo-list-json/php-todo-list-json/todo-list.json')
+            .get('http://localhost:8888/Boolean/4-php-todo-list-json/php-todo-list-json/readjson.php')
             .then((res) => {
-                console.log(res.data);
-                this.allTask = res.data;
+                this.alltodo = res.data;
+                console.log(this.alltodo);
+
             });
     }
 }).mount('#app');
