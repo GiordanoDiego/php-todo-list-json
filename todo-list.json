@@ -1,15 +1,15 @@
 [
     {
         "task" : "Fare il caffè",
-        "done" : true
+        "done" : false
     },
     {
         "task" : "Guardare Sanremo",
-        "done" : true
+        "done" : false
     },
     {
         "task" : "Comprare Olio",
-        "done" : true
+        "done" : false
     },
     {
         "task" : "Scaricare ricetta patate lesse",

@@ -39,7 +39,7 @@
                         <div class="col">
                             
                             <ul>
-                                <li v-for="(singletodo, i) in alltodo" :key="i">
+                                <li v-for="(singletodo, i) in alltodo" :key="i" :class= "singletodo.done === true ? 'completed' : '' ">
                                     {{singletodo.task}}
                                 </li>
                             </ul>
