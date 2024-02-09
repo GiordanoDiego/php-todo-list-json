@@ -34,9 +34,17 @@
                             <h4>
                                 I tuoi To do list:
                             </h4>
-                            
                         </div>
-                        <div class="col">
+                        <div class="col-12">
+                       
+                                <input type="text" name="newTodo" placeholder="Inserisci nuovo task" v-model="newTodo">
+                                <button @click="addTodo()" class="btn btn-success p-1 ms-2 ">
+                                    Aggiungi
+                                </button>
+                     
+                            <hr>
+                        </div>
+                        <div class="col-12">
                             
                             <ul>
                                 <li v-for="(singletodo, i) in alltodo" :key="i" :class= "singletodo.done === true ? 'completed' : '' ">

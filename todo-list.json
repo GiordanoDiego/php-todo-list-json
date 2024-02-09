@@ -1,18 +1,7 @@
 [
-    {
-        "task" : "Fare il caffè",
-        "done" : false
-    },
-    {
-        "task" : "Guardare Sanremo",
-        "done" : false
-    },
-    {
-        "task" : "Comprare Olio",
-        "done" : false
-    },
-    {
-        "task" : "Scaricare ricetta patate lesse",
-        "done" : true
-    }
+  { "task": "Fare il caff\u00e8", "done": false },
+  { "task": "Guardare Sanremo", "done": false },
+  { "task": "Comprare Olio", "done": false },
+  { "task": "Scaricare ricetta patate lesse", "done": true },
+  { "task": "Scongelare carne", "done": false }
 ]
