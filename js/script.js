@@ -23,32 +23,11 @@ createApp({
         };
     },
     methods: {
-        /*
-                addTodo(){
+        removeTodo(i){
             axios
-                .post('http://localhost/Lezione_08_02_24/php-todo-list-json/BACKEND/addTask.php',
-                {
-                    task: this.newTask,
-                    status: false
-                },
-                {
-                    headers: {
-                        'Content-Type' : 'multipart/form-data'
-                    }
-                })
-                .then((res) =>{
-                    if(res.data.code == 200){
-                       this.task.push({task: this.newTask, status: false});
-                    }
-                    this.newTask = '';
-                });
-        }
-        */
-        addTodo(){
-            axios
-            .post('http://localhost:8888/Boolean/4-php-todo-list-json/php-todo-list-json/createNewTodo.php',
+            .post('http://localhost:8888/Boolean/4-php-todo-list-json/php-todo-list-json/deleteTodo.php',
             {
-                task : this.newTodo
+                position : i
             },
             {
                 headers: { 
@@ -57,7 +36,29 @@ createApp({
             })
             .then((res) => {
                 if(res.data.code == 200){
-                    this.task.push({task: this.newTask, status: false});
+                    this.alltodo.splice(i,1);
+                 }
+            });
+
+
+            console.log("Rimosso");
+            this.alltodo.splice(i,1);
+        },
+        addTodo(i){
+            axios
+            .post('http://localhost:8888/Boolean/4-php-todo-list-json/php-todo-list-json/createNewTodo.php',
+            {
+                task : this.newTodo,
+                id : i
+            },
+            {
+                headers: { 
+                    'Content-Type' :   'multipart/form-data'
+                }
+            })
+            .then((res) => {
+                if(res.data.code == 200){
+                    this.task.push({id: i ,task: this.newTask, status: false});
                  }
                  this.newTask = '';
             });
@@ -65,9 +66,11 @@ createApp({
 
             console.log("ADDED");
             this.alltodo.push({
+                id: i,
                 task: this.newTodo,
                 done: false
             });
+            this.newTask = '';
 
         }
     },

@@ -1,20 +1,15 @@
 <?php
 
-
 // Recuperare tutti i todo attualmente esistenti (con file get contents)
 $allTodoJson = file_get_contents("todo-list.json");
 
 // Trasformare la stringa JSON corrispondente ai todo attualmente esistenti
 $allTodo = json_decode($allTodoJson, true);
 
-//creo il nuovo todo
-$newTodo =[
-    "id" => $_POST["id"],
-    "task" => $_POST["task"],
-    "done" => false
-];
-// Aggiungere nell'array il nuovo todo
-$allTodo[] = $newTodo;
+
+// Rimuvo elemento nell'array 
+
+array_splice($allTodo, $_POST["position"], 1);
 
 // Ri-trasformare l'array in una stringa JSON
 $allTodoJsonNew = json_encode($allTodo);
