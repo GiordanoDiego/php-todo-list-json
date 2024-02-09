@@ -9,5 +9,5 @@
       header("Content-Type: application/json");
       echo $alldata;
 
-
+        //file_get_contents("perscorsofile/nomefile") -> serve per leggere un file con php, trasformerà tutto il file in una lista
 ?>

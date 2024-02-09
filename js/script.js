@@ -22,9 +22,7 @@ createApp({
         };
     },
     methods: {
-        handleButtonClick() {
-            console.log(this.faiQualcosa(3));
-        },
+      
         
     },
     mounted() {
